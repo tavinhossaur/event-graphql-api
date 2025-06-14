@@ -12,7 +12,6 @@ import org.springframework.graphql.data.method.annotation.Argument;
 
 import org.springframework.stereotype.Controller;
 
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @Controller
