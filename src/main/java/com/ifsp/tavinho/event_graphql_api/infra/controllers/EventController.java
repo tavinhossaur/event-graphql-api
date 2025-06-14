@@ -32,7 +32,7 @@ public class EventController {
     }
 
     @MutationMapping
-    public Event createEvent(@Argument("input") @Valid EventDTO input) {
+    public Event createEvent(@Argument("input") EventDTO input) {
         return this.eventService.createEvent(input);
     }
 
