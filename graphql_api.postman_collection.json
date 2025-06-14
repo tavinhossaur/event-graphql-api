@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "e97df963-c78c-49bc-9e26-9c66c3217843",
+		"name": "Event-GraphQL-API (json)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43964902"
+	},
+	"item": [
+		{
+			"name": "list-events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"query { events { id description weekday startTime endTime classroomId professorId courseId disciplineId createdAt updatedAt } }\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n     \"query\": \"query { event(id: \\\"684cdea94804bb4c43768004\\\") { id description weekday startTime endTime classroomId professorId courseId disciplineId createdAt updatedAt } }\"\r\n   }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation { createEvent(input: { description: \\\"Aula de Java\\\", weekday: \\\"monday\\\", startTime: \\\"14:00\\\", endTime: \\\"16:00\\\", classroomId: \\\"123\\\", professorId: \\\"456\\\", courseId: \\\"789\\\", disciplineId: \\\"101\\\" }) { id description weekday startTime endTime classroomId professorId courseId disciplineId createdAt updatedAt } }\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation { updateEvent(id: \\\"684cdea94804bb4c43768004\\\", input: { description: \\\"Aula Teste Atualizada\\\", weekday: \\\"tuesday\\\", startTime: \\\"15:00\\\", endTime: \\\"17:00\\\", classroomId: \\\"123\\\", professorId: \\\"456\\\", courseId: \\\"789\\\", disciplineId: \\\"101\\\" }) { id description weekday startTime endTime classroomId professorId courseId disciplineId createdAt updatedAt } }\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"query\": \"mutation { deleteEvent(id: \\\"684cdf5f61efc85925126ee1\\\") }\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/graphql",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

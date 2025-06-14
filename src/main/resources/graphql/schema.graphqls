@@ -1,0 +1,35 @@
+type Event {
+    id: ID!
+    description: String!
+    weekday: String!
+    startTime: String!
+    endTime: String!
+    classroomId: String!
+    professorId: String!
+    courseId: String!
+    disciplineId: String!
+    createdAt: String!
+    updatedAt: String!
+}
+
+input EventInput {
+    description: String!
+    weekday: String!
+    startTime: String!
+    endTime: String!
+    classroomId: String!
+    professorId: String!
+    courseId: String!
+    disciplineId: String!
+}
+
+type Query {
+    events: [Event!]!
+    event(id: ID!): Event
+}
+
+type Mutation {
+    createEvent(input: EventInput!): Event!
+    updateEvent(id: ID!, input: EventInput!): Event!
+    deleteEvent(id: ID!): Boolean!
+} 

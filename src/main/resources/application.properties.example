@@ -1,0 +1,7 @@
+# Spring / MongoDB
+spring.application.name=event-graphql-api
+spring.data.mongodb.uri=mongodb+srv://<username>:<password>@smt-cluster-0.rnyoxdr.mongodb.net/graphql-test-db?retryWrites=true&w=majority&appName=smt-cluster-0
+
+# GraphQL
+spring.graphql.graphiql.enabled=true
+spring.graphql.schema.printer.enabled=true
